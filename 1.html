@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<header>
+    <div>
+        <img id="replacer-image" src="https://i.pinimg.com/originals/b1/02/24/b10224ae75edd5debd06c44662cbcb30.png">
+    </div>
+    <div class="nav-beginning">
+        <nav class="navTag-begin">Hjælp</nav>
+        <nav class="navTag-begin">ødelagt</nav>
+        <nav class="navTag-begin">Gå til Europa</nav>
+    </div>
+</header>
 <body>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Cairo');
@@ -13,10 +23,40 @@
         body {
   margin: 0;
   font-family: "Cairo";
+  background-color: #3C505B;
 }
- 
+
+#replacer-image {
+    width: 100px;
+    height: 100px;
+}
+
+.nav-beginning {
+    height: auto;
+    width: auto;
+    margin-right: 0;
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-items: center;
+    /* border: solid #8C2626; */
+}
+
+
+.navTag-begin {
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    transition: all 0.3s;
+    margin-right: 100px;
+}
+.navTag-begin:hover {
+    transform: rotate(-5deg);
+}
+
 #wrapper {
-  color: Black;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,10 +146,10 @@
     <span class="hi">Hello, I am Ryan Elbanna, and I am a creative and passionate Website and Game Developer.</span>
     <span class="hi">مرحبا انا ريان البنا. أنا مصمم مواقع ويب مبدع ومطور ألعاب فيديو</span>
     <span class="hi">Hej, jeg er Ryan Elbanna, og jeg er en kreativ og passioneret hjemmesideudvikler og spiludvikler. 👌</span>
+    <span class="hi">👌</span>
   </div>
-  <button onclick=""></button>
   <section>
-    <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+    <p id="pTag">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
   </section>
 </body>
 </html>
