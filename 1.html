@@ -7,6 +7,109 @@
     <title>Document</title>
 </head>
 <body>
-    <h2></h2>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Cairo');
+       
+        body {
+  margin: 0;
+  font-family: "Cairo";
+}
+ 
+#wrapper {
+  color: Black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+    overflow: hidden;
+    width: auto;
+    height: 100px;
+    margin-top: 200px;
+}
+ 
+.hi {
+  position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 32px;
+    /* line-height: 100px; */
+    text-align: center;
+}
+ 
+.hi {
+  transform: translate3d(0, 100px, 0);
+  animation: rotate 14s infinite;
+  transition-timing-function: cubic-bezier(0.2,0.5,0.3,1)
+}
+ 
+.hi:nth-of-type(1) {
+  animation-delay: 3.5s;
+}
+ 
+.hi:nth-of-type(2) {
+  animation-delay: 7s;
+}
+ 
+.hi:nth-of-type(3) {
+  animation-delay: 10.5s;
+}
+ 
+@keyframes rotate {
+/* Text is positioned below the wrap */
+0% {
+    transform: translate3d(0, 100px, 0);
+  }
+ 
+/* Move text up and make it visible */
+2.5% {
+    transform: translate3d(0, 0, 0);
+  }
+ 
+/* Between 2.5% and 25%, nothing changes (text is visible) */
+25% {
+    transform: translate3d(0, 0, 0);
+  }  
+ 
+/* Move text up and out of the wrap */
+27.5% {
+    transform: translate3d(0, -100px, 0);
+  }
+ 
+/* Between 27.5% and 99%, nothing changes (text is invisible) */
+99.9999% {
+    transform: translate3d(0, -100px, 0);
+  }
+ 
+/* Move text to it's original position (loop starts over) */
+100% {
+    transform: translate3d(0, 100px, 0);
+  }  
+}
+ 
+/* #hi:after {
+  content: "";
+  animation: spin 15s linear infinite;
+}
+ 
+@keyframes spin {
+    0% { content:"Hello, I am Ryan Elbanna, and I am a creative and passionate Website and Game Developer."; }
+   50%, 70% { content: "مرحبا انا ريان البنا. أنا مصمم مواقع ويب مبدع ومطور ألعاب فيديو"; }
+  100% {content: "Hej, jeg er Ryan Elbanna, og jeg er en kreativ og passioneret hjemmesideudvikler og spiludvikler."; }
+} */
+    </style>
+    <div id="wrapper">
+    <span class="hi">Hello, I am Ryan Elbanna, and I am a creative and passionate Website and Game Developer.</span>
+    <span class="hi">مرحبا انا ريان البنا. أنا مصمم مواقع ويب مبدع ومطور ألعاب فيديو</span>
+    <span class="hi">Hej, jeg er Ryan Elbanna, og jeg er en kreativ og passioneret hjemmesideudvikler og spiludvikler. 👌</span>
+  </div>
+  <button onclick=""></button>
+  <section>
+    <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+  </section>
 </body>
 </html>
