@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="1.css" />
   <title>Document</title>
 </head>
  
@@ -21,224 +23,90 @@
     </div>
     <nav class="nav-beginning">
       <ul class="nav-links">
-        <li class="nav-li">Hjælp</li>
-        <li class="nav-li">ødelagt</li>
-        <li class="nav-li">Gå til Europa</li>
+        <li class="nav-li">Hjælp/Work</li>
+        <li class="nav-li">ødelagt/About</li>
+        <li class="nav-li">Gå til Europa/Contact</li>
       </ul>
     </nav>
   </header>
  
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Cairo');
- 
-    body {
-      margin: 0;
-      font-family: "Cairo";
-      background-color: #3C505B;
-    }
- 
-    #logo-container {
-      display: inline-block;
-      cursor: pointer;
-    }
- 
-    #logo-container:hover #logo-back {
-        transform: rotateY(180deg);
-    }
-    #logo-container:hover #logo-front {
-        transform: rotateY(0deg);
-    }
-    #logo-container, #logo-front, #logo-back {
-      border-radius: 50px;
-        width: 100px;
-        height: 100px;
-    }
- 
-    #logo-front, #logo-back {
-        position: absolute;
-        backface-visibility: hidden;
-        transition: 0.6s;
-        transform-style: preserve-3d;
-    }
-    #logo-front {
-        z-index: 1;
-        transform: rotateY(-180deg);
-    }
-    #logo-back {
-        z-index: 2;
-        transform: rotateY(0deg);
-    }
- 
-    .nav-links {
-      list-style: none;
-    }
-   
-    .nav-li {
-      font-size: 16px;
-      color: white;
-      display: inline-block;
-      padding: 0px 20px;
-      position: relative;
-      text-decoration: none;
-    }
- 
-  .nav-li::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #f8f8f8;
-  left: 0;
-  bottom: 0;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 200ms ease-in-out;
-}
- 
-.nav-li:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
- 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
- 
-    /* Header Ending */
- 
-    #wrapper {
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      width: auto;
-      height: 100px;
-      margin-top: 200px;
-    }
- 
-    .hi {
-      position: absolute;
-      left: 0%;
-      top: 0%;
-      right: 0%;
-      bottom: 0%;
-      display: block;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      font-size: 32px;
-      /* line-height: 100px; */
-      text-align: center;
-    }
- 
-    .hi {
-      transform: translate3d(0, 100px, 0);
-      animation: rotate 14s infinite;
-      transition-timing-function: cubic-bezier(0.2, 0.5, 0.3, 1)
-    }
- 
-    .hi:nth-of-type(1) {
-      animation-delay: 3.5s;
-    }
- 
-    .hi:nth-of-type(2) {
-      animation-delay: 7s;
-    }
- 
-    .hi:nth-of-type(3) {
-      animation-delay: 10.5s;
-    }
- 
-    @keyframes rotate {
- 
-      /* Text is positioned below the wrap */
-      0% {
-        transform: translate3d(0, 100px, 0);
-      }
- 
-      /* Move text up and make it visible */
-      2.5% {
-        transform: translate3d(0, 0, 0);
-      }
- 
-      /* Between 2.5% and 25%, nothing changes (text is visible) */
-      25% {
-        transform: translate3d(0, 0, 0);
-      }
- 
-      /* Move text up and out of the wrap */
-      27.5% {
-        transform: translate3d(0, -100px, 0);
-      }
- 
-      /* Between 27.5% and 99%, nothing changes (text is invisible) */
-      99.9999% {
-        transform: translate3d(0, -100px, 0);
-      }
- 
-      /* Move text to it's original position (loop starts over) */
-      100% {
-        transform: translate3d(0, 100px, 0);
-      }
-    }
-
-    hr{
-      width: 250px;
-      height: 2px;
-      background: #f8f8f8;
-      animation: go 4s cubic-bezier(0.2, 0.5, 0.3, 1) infinite;
-    }
-
-    @keyframes go {
-      0% {
-        transform: scaleX(1);
-      }
-      50%{
-        transform: scaleX(0.5);
-  transition: transform 200ms ease-in-out;
-  background-color: #3C505B;
-      }
-      100%{
-        transform: scaleX(1);
-      }
-    }
-
-    #first-section-page {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 18px;
-    }
-
-
-    /* #hi:after {
-  content: "";
-  animation: spin 15s linear infinite;
-}
- 
-@keyframes spin {
-    0% { content:"Hello, I am Ryan Elbanna, and I am a creative and passionate Website and Game Developer."; }
-   50%, 70% { content: "مرحبا انا ريان البنا. أنا مصمم مواقع ويب مبدع ومطور ألعاب فيديو"; }
-  100% {content: "Hej, jeg er Ryan Elbanna, og jeg er en kreativ og passioneret hjemmesideudvikler og spiludvikler."; }
-} */
-  </style>
   <div id="wrapper">
-    <span class="hi">Hello, I am Ryan Elbanna, and I am a creative and passionate Website and Game Developer.</span>
-    <span class="hi">مرحبا انا ريان البنا. أنا مصمم مواقع ويب مبدع ومطور ألعاب فيديو</span>
-    <span class="hi">Hej, jeg er Ryan Elbanna, og jeg er en kreativ og passioneret hjemmesideudvikler og spiludvikler.
-      👌</span>
-    <span class="hi">👌</span>
+    <span class="cycling-title-text">Hello, I am Ryan Elbanna, and I am a creative and passionate Website and Game Developer.</span>
+    <span class="cycling-title-text">مرحبا انا ريان البنا. أنا مصمم مواقع ويب مبدع ومطور ألعاب فيديو</span>
+    <span class="cycling-title-text">Hej, jeg er Ryan Elbanna, og jeg er en kreativ og passioneret hjemmesideudvikler og spiludvikler.👌</span>
+    <span class="cycling-title-text">👌</span>
   </div>
 <hr>
   <section id="first-section-page">
-    <p id="pTag">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem
-      Ipsum Lorem Ipsum Lorem Ipsum</p>
+    <p id="pTag">øøøøøøøøøøøøøø</p>
   </section>
-  
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+  <section id="first-section-page">
+    <p id="pTag">øøøøøøøøøøøøøø</p>
+  </section>
+
+  <button onclick="topFunction()" id="scroll-to-top-button" title="Go to top"><span class="material-symbols-outlined">arrow_upward</span></button>
+
+  <script src="1.js"></script>
 </body>
  
 </html>

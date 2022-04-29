@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+
+body {
+    margin: 0;
+    font-family: "Cairo";
+    background-color: #3C505B;
+}
+
+#logo-container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+#logo-container:hover #logo-back {
+    transform: rotateY(180deg);
+}
+
+#logo-container:hover #logo-front {
+    transform: rotateY(0deg);
+}
+
+#logo-container,
+#logo-front,
+#logo-back {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+}
+
+#logo-front,
+#logo-back {
+    position: absolute;
+    backface-visibility: hidden;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+#logo-front {
+    z-index: 1;
+    transform: rotateY(-180deg);
+}
+
+#logo-back {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-li {
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    display: inline-block;
+    padding: 0px 20px;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #f8f8f8;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 200ms ease-in-out;
+}
+
+.nav-li:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Header Ending */
+
+#wrapper {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    height: 100px;
+    margin-top: 200px;
+}
+
+.cycling-title-text {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 32px;
+    /* line-height: 100px; */
+    text-align: center;
+}
+
+.cycling-title-text {
+    transform: translate3d(0, 100px, 0);
+    animation: rotate 14s infinite;
+    transition-timing-function: cubic-bezier(0.2, 0.5, 0.3, 1)
+}
+
+.cycling-title-text:nth-of-type(1) {
+    animation-delay: 3.5s;
+}
+
+.cycling-title-text:nth-of-type(2) {
+    animation-delay: 7s;
+}
+
+.cycling-title-text:nth-of-type(3) {
+    animation-delay: 10.5s;
+}
+
+@keyframes rotate {
+
+    /* Text is positioned below the wrap */
+    0% {
+        transform: translate3d(0, 100px, 0);
+    }
+
+    /* Move text up and make it visible */
+    2.5% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    /* Between 2.5% and 25%, nothing changes (text is visible) */
+    25% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    /* Move text up and out of the wrap */
+    27.5% {
+        transform: translate3d(0, -100px, 0);
+    }
+
+    /* Between 27.5% and 99%, nothing changes (text is invisible) */
+    99.9999% {
+        transform: translate3d(0, -100px, 0);
+    }
+
+    /* Move text to it's original position (loop starts over) */
+    100% {
+        transform: translate3d(0, 100px, 0);
+    }
+}
+
+hr {
+    width: 250px;
+    height: 2px;
+    background: #f8f8f8;
+    animation: go 4s cubic-bezier(0.2, 0.5, 0.3, 1) infinite;
+}
+
+@keyframes go {
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(0.5);
+        transition: transform 200ms ease-in-out;
+        background-color: #3C505B;
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+#first-section-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+}
+
+#scroll-to-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #3C505B;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 100%;
+    animation: fadein 0.5s;
+    transition: 0.3s ease-in-out;
+    border: 3px solid white;
+}
+
+#scroll-to-top-button:hover {
+    padding: 25px;
+}
+
+.material-symbols-outlined {
+    animation: scroll-animation-up 2s cubic-bezier(0.2, 0.5, 0.3, 1) infinite;
+}
+
+@keyframes scroll-animation-up {
+    0% {
+        transform: translate3d(0, 20px, 0);
+    }
+
+    50% {
+        /* opacity: 0; */
+        transform: translate3d(0, 0px, 0);
+    }
+
+    75% {
+        transform: translate3d(0, 0px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 20px, 0);
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* #hi:after {
+  content: "";
+  animation: spin 15s linear infinite;
+}
+ 
+@keyframes spin {
+    0% { content:"Hello, I am Ryan Elbanna, and I am a creative and passionate Website and Game Developer."; }
+   50%, 70% { content: "مرحبا انا ريان البنا. أنا مصمم مواقع ويب مبدع ومطور ألعاب فيديو"; }
+  100% {content: "Hej, jeg er Ryan Elbanna, og jeg er en kreativ og passioneret hjemmesideudvikler og spiludvikler."; }
+} */
