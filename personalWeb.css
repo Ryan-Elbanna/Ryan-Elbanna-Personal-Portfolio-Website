@@ -3,7 +3,7 @@
 body {
     margin: 0;
     font-family: "Cairo";
-    background-color: #3C505B;
+    background-color: black;
 }
 
 #logo-container {
@@ -85,6 +85,8 @@ header {
 
 
 /* Header Ending */
+
+/* Home Page Start */
 
 #wrapper {
     color: white;
@@ -188,11 +190,20 @@ hr {
 
 #first-section-page {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: 18px;
 }
+
+
+/* Home Page Ending */
+
+/* About Me Start */
+
+
+/* About Me Ending */
 
 #scroll-to-top-button {
     display: none;
@@ -202,7 +213,7 @@ hr {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #3C505B;
+    background-color: transparent;
     color: white;
     cursor: pointer;
     padding: 20px;
