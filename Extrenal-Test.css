@@ -371,6 +371,118 @@ hr {
 }
 /* About Page End */
 
+
+
+/* Works Page Start */
+
+/* Works Page End */
+
+
+/* Contact Page Start */
+
+ .contact-mig-title-main {
+     color: #FFFFFF;
+     display: flex;
+     justify-content: center;
+     margin-top: 200px;
+     font-size: 64px;
+ }
+
+ #contact-page-main-first-section {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     align-content: center;
+    margin: 100px;
+}
+
+#unique-form-error-display {
+    color: red;
+    font-size: 42px;
+    text-align: center;
+}
+
+ #contact-mig-form-main-items {
+     color: #FFFFFF;
+     display: flex;
+     flex-direction: column;
+ }
+
+ #contact-mig-form-main-items label {
+     font-size: 42px;
+}
+
+#contact-mig-form-main-items input {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: none;    
+    border-bottom: solid 3px #809FA6;
+    font-size: 32px;
+    width: 1000px;
+    transition: 0.8s border-bottom ease-in-out;
+}
+
+#contact-mig-form-main-items input:focus {
+    border-bottom: solid 3px red;
+}
+
+#form-contact-button-submit {
+    margin-top: 100px;
+    width: auto;
+    background-color: #809FA6;
+    color: #FFFFFF;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#prefer-mail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.prefer-mail-title-main {
+    color: #FFFFFF;
+    margin-top: 100px;
+    font-size: 64px;
+}
+
+#open-ms-mail {
+    width: 250px;
+    height: 250px;
+    border-radius: 500px;
+    font-size: 100px;
+    cursor: pointer;
+    transition: 0.8s ease-in-out;
+}
+
+#open-ms-mail:hover {
+    background-color: #809FA6;
+    color: #FFFFFF;
+}
+
+#prefer-mail p{
+font-size: 40px;
+color: #FFFFFF;
+}
+
+#other-contact-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#other-contact-options a{
+color: #6E6F73;
+font-size: 90px;
+text-decoration: none;
+font-family: 'Times New Roman', Times, serif;
+}
+
+/* Contact Page End */
+
 #scroll-to-top-button {
     display: none;
     position: fixed;
