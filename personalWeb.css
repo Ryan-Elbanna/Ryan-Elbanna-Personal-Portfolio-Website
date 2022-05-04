@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Cairo');
 
+html {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: "Cairo";
+    background-color: #3C505B;
     background-color: black;
 }
 
@@ -47,21 +52,28 @@ body {
 
 .nav-links {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-li-link {
+    text-decoration: none;
+    color: white;
 }
 
 .nav-li {
     cursor: pointer;
-    font-size: 16px;
-    color: white;
+    font-size: 22px;
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 0px;
     position: relative;
+    margin-top: 20px;
     text-decoration: none;
 }
 
 .nav-li::after {
     content: "";
-    position: absolute;
+    position: absolute; 
     width: 100%;
     height: 2px;
     background: #f8f8f8;
@@ -78,15 +90,79 @@ body {
 }
 
 header {
-    display: flex;
+    width: 100%;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    transition: 0.3s ease-in-out;
 }
 
+.nav-beginning {
+    width: 300px;
+    height: 100%;
+    background-color: #3C505B;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 1s cubic-bezier(1, 0, 0, 1);
+}
+
+.changeState {
+    right: 0;
+}
+
+.hamburger-menu {
+    width: 50px;
+    height: 30px;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    transition: all 0.4s;
+}
+
+.changeState .line-1 {
+    transform: rotateZ(-45deg) translate(-6px, 5px); 
+}
+/* .changeState .line-2 {
+    opacity: 0;
+} */
+.changeState .line-3 {
+    transform: rotateZ(45deg) translate(-6px, -5px);
+}
 
 /* Header Ending */
 
 /* Home Page Start */
+
+#home-page-hero-image {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: 0;
+    margin: auto;
+    margin-top: 100px;
+    overflow: hidden;
+    z-index: -1;
+}
 
 #wrapper {
     color: white;
@@ -188,22 +264,112 @@ hr {
     }
 }
 
-#first-section-page {
+#first-home-section-page {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 18px;
+    font-size: 24px;
+    margin: auto;
+    /* animation: slide-up 2s; */
 }
 
+/* @keyframes slide-up {
+    from {
+        opacity: 0;
+        line-height: 100px;
+    }
+    to{
+        opacity: 1;
+        line-height: 45px;
+    }
+} */
 
-/* Home Page Ending */
+#first-home-section-page p{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-/* About Me Start */
+#first-home-section-page p strong{
+    color: #809FA6;
+}
+
+/* Home Page End */
 
 
-/* About Me Ending */
+/* About Page Start */
+
+#double-about-page-first-content {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin: 0px;
+    font-size: 24px;
+    position: relative;
+    z-index: 2;
+    margin-top: 300px;
+}
+
+#double-about-page-first-hero-image {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: 0;
+    margin: auto;
+    margin-top: 100px;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#double-1-title {
+    font-size: 50px;
+    background-color: #809FA6;
+}
+
+.double-1-left {
+    width: 500px;
+}
+
+#double-2-title {
+    font-size: 50px;
+}
+.double-2-right {
+    width: 500px;
+}
+
+#second-about-page-content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.centre-content {
+    width: 1000px;
+}
+
+.about-me-image-carousel {
+    background-color: #FFFFFF;
+    height: 100px;
+}
+
+#double-about-page-second-content {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin: 0px;
+    font-size: 24px;
+    position: relative;
+    z-index: 2;
+}
+/* About Page End */
 
 #scroll-to-top-button {
     display: none;
@@ -259,6 +425,8 @@ hr {
         opacity: 1;
     }
 }
+
+
 
 /* #hi:after {
   content: "";
