@@ -362,6 +362,7 @@ hr {
 #double-about-page-second-content {
     color: white;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-around;
     align-content: center;
     margin: 0px;
@@ -424,48 +425,77 @@ hr {
 
 #contact-mig-form-main-items input:focus {
     border-bottom: solid 3px red;
+    resize: none;
+    outline: none;
+}
+
+#contact-enter-text-message-area {
+    background-color: #dddddd;
+    color: #666666;
+    padding: 1em;
+    border-radius: 10px;
+    border: 4px solid #809FA6;
+    outline: none;
+    resize: none;
+    /* font-family: "Heebo", sans-serif; */
+    font-family: "Cairo";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    width: 1000px;
+    max-width: 1000px;
+    height: 200px;
+    max-height: 200px;
+    transition: all 0.2s;
+}
+
+#contact-enter-text-message-area:hover {
+    cursor: pointer;
+    background-color: #eeeeee;
+  }
+  
+  #contact-enter-text-message-area:focus {
+    cursor: text;
+    color: black;
+    background-color: white;
+    border-color: #333333;
+  }
+
+#submit-container {
+    display: flex;
+    justify-content: center;
 }
 
 #form-contact-button-submit {
-    margin-top: 100px;
-    width: auto;
-    background-color: #809FA6;
-    color: #FFFFFF;
-    font-size: 50px;
-    cursor: pointer;
-}
-
-#prefer-mail {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-
-.prefer-mail-title-main {
-    color: #FFFFFF;
-    margin-top: 100px;
-    font-size: 64px;
-}
-
-#open-ms-mail {
+    justify-content: center;
     width: 250px;
     height: 250px;
-    border-radius: 500px;
-    font-size: 100px;
+    border-radius: 50%;
+    margin-top: 50px;
+    font-size: 20px;
     cursor: pointer;
     transition: 0.8s ease-in-out;
+    background-image: linear-gradient(#809FA6, #809FA6);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    border: none;
 }
 
-#open-ms-mail:hover {
+#form-contact-button-submit .material-symbols-outlined{
+    transform: rotate(-45deg);
+    font-size: 100px;
+}
+
+#form-contact-button-submit:hover {
     background-color: #809FA6;
     color: #FFFFFF;
+    background-size: 100% 100%;
 }
 
-#prefer-mail p{
-font-size: 40px;
-color: #FFFFFF;
-}
 
 #other-contact-options {
     display: flex;
@@ -474,12 +504,61 @@ color: #FFFFFF;
     align-items: center;
 }
 
+.other-contact-options-title {
+    color: #FFFFFF;
+    font-size: 64px;
+}
+
 #other-contact-options a{
-color: #6E6F73;
+color: #cec9c9;
 font-size: 90px;
 text-decoration: none;
-font-family: 'Times New Roman', Times, serif;
+font-family: 'Elgoc Alt', 'Times New Roman', sans-serif;
+padding: 20px 100px;
 }
+
+#contact-thank-you {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-thanks-title {
+    color: #FFFFFF;
+}
+
+#unique-form-error-display {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 30px;
+    font-size: 20px;
+}
+
+#unique-form-error-display.displayError {
+    visibility: visible;
+    animation: displayTheError 0.5s;
+  }
+
+  @keyframes displayTheError {
+    from {
+        top: 0; 
+        opacity: 0;
+    }
+    to {
+        top: 30px;
+        opacity: 1;
+    }
+  }
 
 /* Contact Page End */
 
@@ -505,7 +584,7 @@ font-family: 'Times New Roman', Times, serif;
     padding: 25px;
 }
 
-.material-symbols-outlined {
+#scroll-to-top-button .material-symbols-outlined {
     animation: scroll-animation-up 2s cubic-bezier(0.2, 0.5, 0.3, 1) infinite;
 }
 
@@ -538,6 +617,20 @@ font-family: 'Times New Roman', Times, serif;
     }
 }
 
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #cec9c9;     
+    font-size: 20px;
+    /* background-color: red; */
+    margin-top: 50px;
+}
+
+footer span {
+    padding: 10px;
+}
 
 
 /* #hi:after {
