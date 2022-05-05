@@ -35,15 +35,52 @@ hamburgerIcon.addEventListener("click", function() {
 
 // Hmaburger menu JS toggle function end
 
-// var form = document.getElementById("contact-mig-form-main-items");
-// var formErrorOut = document.getElementById("unique-form-error-display")
-// var formData = form.elements;
-// var formFirstName = formData["first-name"].value;
-// var formLastName = formData["last-name"].value;
-// var formEmail = formData["Email-add"].value
+function validateForm() {
 
-// function formValidation() {
-//   let blank = "";
-//   if(formFirstName = "")
-//   blank += "<p> First Name Is Invalid! </p>"
-// }
+let form = document.getElementById("contact-mig-form-main-items");
+let formErrorOut = document.getElementById("unique-form-error-display")
+let formData = form.elements;
+let formFirstName = formData["first-name"].value;
+let formLastName = formData["last-name"].value;
+let formEmail = formData["Email-add"].value
+let regExp = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/;
+let messageArea = document.getElementById("contact-enter-text-message-area").value;
+
+  event.preventDefault();
+
+  if (formFirstName == "" || formFirstName == null) {
+    document.getElementById("first-name").focus();
+    formErrorOut.innerHTML = "Invalid First Name!";
+    formErrorOut.className = "displayError";
+    formErrorOut.style.backgroundColor = "red"
+    setTimeout(function() {formErrorOut.className = formErrorOut.className.replace("displayError", "");}, 2500); 
+  }
+  else if (formLastName == "" || formLastName == null) {
+    document.getElementById("last-name").focus();
+    formErrorOut.innerHTML = "Invalid Last Name!";
+    formErrorOut.className = "displayError";
+    formErrorOut.style.backgroundColor = "red"
+    setTimeout(function() {formErrorOut.className = formErrorOut.className.replace("displayError", "");}, 2500); 
+  }
+  else if (!regExp.test(formEmail) ) {
+    document.getElementById("Email-add").focus();
+    formErrorOut.innerHTML = "Invalid Email!";
+    formErrorOut.className = "displayError";
+    formErrorOut.style.backgroundColor = "red"
+    setTimeout(function() {formErrorOut.className = formErrorOut.className.replace("displayError", "");}, 2500);
+  }
+  else if (messageArea == "" || messageArea == null) {
+    document.getElementById("contact-enter-text-message-area").focus();
+    formErrorOut.innerHTML = "Can't leave message empty!";
+    formErrorOut.className = "displayError";
+    formErrorOut.style.backgroundColor = "red"
+    setTimeout(function() {formErrorOut.className = formErrorOut.className.replace("displayError", "");}, 2500);
+  }
+  else {
+    formErrorOut.innerHTML = "Email has been sent!";
+    formErrorOut.className = "displayError";
+    formErrorOut.style.backgroundColor = "green"
+    setTimeout(function() {formErrorOut.className = formErrorOut.className.replace("displayError", "");}, 2500); 
+  }
+  
+}
