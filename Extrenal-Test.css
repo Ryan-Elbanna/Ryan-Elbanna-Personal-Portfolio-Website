@@ -162,7 +162,9 @@ header {
     margin-top: 100px;
     overflow: hidden;
     z-index: -1;
+    box-shadow: 0 4px 100px 25px rgb(255, 255, 255), 0 6px 20px 0 rgb(255, 255, 255);
 }
+
 
 #wrapper {
     color: white;
@@ -312,6 +314,16 @@ hr {
     margin-top: 300px;
 }
 
+@keyframes about-double-content-appear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
 #double-about-page-first-hero-image {
     position: absolute;
     width: 400px;
@@ -324,6 +336,17 @@ hr {
     margin-top: 100px;
     overflow: hidden;
     z-index: -1;
+    animation: about-image-appear 2s ease-in;
+}
+
+@keyframes about-image-appear {
+    from{
+        opacity: 0;
+        top: 100px; 
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 #double-1-title {
@@ -376,6 +399,55 @@ hr {
 
 /* Works Page Start */
 
+#works-title-main {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 64px;
+}
+
+#works-format-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* background-color: white; */
+    margin-top: 100px;
+    max-width: auto;
+}
+
+.works-format-img {
+    width: 600px;
+    height: 500px;
+}
+
+.works-image-text-description {
+    color: white;
+    font-size: 75px;
+    position: relative;
+    left: -100px;
+    z-index: 2;
+}
+
+#works-format-section-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    /* background-color: white; */
+    margin-top: 100px;
+    max-width: auto;
+}
+
+.works-image-text-description-2 {
+    color: white;
+    font-size: 75px;
+    position: relative;
+    left: 100px;
+    z-index: 2;
+}
 /* Works Page End */
 
 
@@ -411,6 +483,7 @@ hr {
 
  #contact-mig-form-main-items label {
      font-size: 42px;
+     margin-top: 10px;
 }
 
 #contact-mig-form-main-items input {
@@ -526,7 +599,9 @@ padding: 20px 100px;
 
 .contact-thanks-title {
     color: #FFFFFF;
+    font-size: 50px;
 }
+
 
 #unique-form-error-display {
     visibility: hidden;
