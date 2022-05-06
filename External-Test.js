@@ -10,8 +10,9 @@ function scrollFunction() {
     // headerElement.style.borderBottom = "solid 1px white";
     // sectionText.style.animation = "slide-up 2s"
     // sectionText.style.opacity = "1"
-
-  } else {
+  } 
+  
+  else {
     mybutton.style.display = "none";
     headerElement.style.borderBottom = "none";
   }
@@ -83,4 +84,19 @@ let messageArea = document.getElementById("contact-enter-text-message-area").val
     setTimeout(function() {formErrorOut.className = formErrorOut.className.replace("displayError", "");}, 2500); 
   }
   
+}
+
+// Handles about page animations when the user scrolls down the page
+window.onscroll = function() {aboutScrollFunction()};
+
+function aboutScrollFunction() {
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    document.getElementById("second-about-p-2").style.animation = "second-about-page-content-first-instance-2 1s ease-in-out"
+    document.getElementById("second-about-p-2").style.opacity = "1"
+  }
+  if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+    document.getElementById("second-about-p-3").style.animation = "second-about-page-content-first-instance-3 1s ease-in-out"
+    document.getElementById("second-about-p-3").style.opacity = "1"
+  }
+
 }

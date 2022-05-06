@@ -42,6 +42,13 @@ body {
 
 #logo-front {
     z-index: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 24px;
+    text-decoration: none;
     transform: rotateY(-180deg);
 }
 
@@ -307,22 +314,23 @@ hr {
     display: flex;
     justify-content: space-around;
     align-content: center;
-    margin: 0px;
     font-size: 24px;
     position: relative;
     z-index: 2;
     margin-top: 300px;
+    animation: about-double-1-left-appear 2s;
 }
 
-@keyframes about-double-content-appear {
+@keyframes about-double-1-left-appear {
     from{
         opacity: 0;
+        top: 100px;
     }
     to{
         opacity: 1;
+        top: 0px;
     }
 }
-
 
 #double-about-page-first-hero-image {
     position: absolute;
@@ -370,7 +378,49 @@ hr {
     justify-content: center;
     align-content: center;
     color: #FFFFFF;
-    font-size: 20px;
+    font-size: 24px;
+}
+
+#second-about-p-1 {
+    animation: second-about-page-content-first-instance 1s ease-in-out;
+}
+
+@keyframes second-about-page-content-first-instance {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#second-about-p-2 {
+    opacity: 0;
+}
+
+@keyframes second-about-page-content-first-instance-2 {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#second-about-p-3 {
+    opacity: 0;
+}
+
+@keyframes second-about-page-content-first-instance-3 {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .centre-content {
@@ -500,6 +550,41 @@ hr {
     border-bottom: solid 3px red;
     resize: none;
     outline: none;
+}
+
+#first-name {
+    animation: first-name-slide 1s ease-in;
+}
+@keyframes first-name-slide {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#last-name {
+    animation: last-name-slide 1.5s ease-in;
+}
+@keyframes last-name-slide {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+#Email-add {
+    animation: Email-add-slide 2s ease-in;
+}
+
+@keyframes Email-add-slide {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #contact-enter-text-message-area {
@@ -636,6 +721,28 @@ padding: 20px 100px;
   }
 
 /* Contact Page End */
+
+/* Resume Start */
+
+#my-resume-title {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 64px;
+}
+
+#my-resume-content-main {
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+}
+
+#my-resume-content-title {
+    display: flex;
+}
+
+/* Resume End */
 
 #scroll-to-top-button {
     display: none;
