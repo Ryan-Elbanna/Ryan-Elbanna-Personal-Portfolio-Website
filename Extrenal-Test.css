@@ -460,7 +460,7 @@ hr {
 }
 
 .works-format-img-left, .works-format-img-right {
-    width: 600px;
+    width: 700px;
     height: 500px;
     opacity: 0;
     transition: opacity 1s ease-in, transform 1s ease-in;
@@ -496,6 +496,124 @@ hr {
 }
 
 /* Works Page End */
+
+
+/* Works Children Links Format Start*/
+#works-children-hero-image {
+    position: absolute; 
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: 0;
+    /* margin: auto; */
+    /* display: flex; */
+    /* margin-top: 100px; */
+    overflow-y: hidden;
+    z-index: -1;
+    animation: works-children-image cubic-bezier(0.15, 0.3, 0.16, 0.96) 2.8s;
+}
+
+@keyframes works-children-image {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.works-main {
+    background-image: url(Images/Adobe-Sparks-About-Me-Image-Personal.JPG);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
+
+.works-children-hero-title {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    font-size: 64px;
+    animation: works-children-title-appear cubic-bezier(0.15, 0.3, 0.16, 0.96) 1.8s;
+}
+
+@keyframes works-children-title-appear {
+    from{
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.works-hero-main {
+    padding-top: 30px;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    /* max-width: 1380px; */
+    margin: 0 auto;
+    /* height: 100%; */
+}
+
+.works-title-flex-left, .works-title-flex-right {
+    flex-basis: 50%;
+}
+
+.works-children-section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.works-children-centre-content {
+    width: 1000px;
+}
+
+.works-title-flex-right {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.works-children-hero-info-group{
+    font-size: 22px;
+    color: #ffffff;
+    animation: smooth-works-appear cubic-bezier(0.15, 0.3, 0.16, 0.96) 1.8s;
+}
+
+.works-children-hero-info {
+    color: #ffffff;
+    font-size: 22px;
+    animation: smooth-works-appear cubic-bezier(0.15, 0.3, 0.16, 0.96) 2.3s;
+}
+
+@keyframes smooth-works-appear {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Works Children Links Formay End */
 
 
 /* Contact Page Start */
