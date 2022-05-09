@@ -8,22 +8,74 @@ function scrollFunction() {
   if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     mybutton.style.display = "block";
     // headerElement.style.borderBottom = "solid 1px white";
-    // sectionText.style.animation = "slide-up 2s"
-    // sectionText.style.opacity = "1"
   } 
   
   else {
     mybutton.style.display = "none";
     headerElement.style.borderBottom = "none";
   }
-
+  // Scroll to top end
 }
 
 function topFunction() {
-window.scrollTo({top: 0, behavior: 'smooth'});
-}
+  window.scrollTo({top: 0, behavior: 'smooth'});
+  }
 
-// Header and Scroll to top functions ending
+  // Header and Scroll to top functions ending
+
+
+var aboutSliders = document.querySelectorAll(".aboutslide-in");
+var sliders = document.querySelectorAll(".slide-in");
+
+const appearOptions = {
+  thresholds: 0,
+  rootMargin: "0px 0px -250px 0px"
+};
+
+const aboutAppearOptions = {
+  thresholds: 0,
+  rootMargin: "0px 0px -300px 0px"
+};
+
+// Works page intersection observer scrolling begin
+var appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(function(entry) {
+    if (!entry.isIntersecting) {
+      return;
+    } 
+    else {
+      entry.target.classList.add("worksAppear");
+      appearOnScroll.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+// Works page intersection observer scrolling end
+
+
+// About page intersection observer scrolling begin
+var aboutAppearOnScroll = new IntersectionObserver(function(entries, aboutAppearOnScroll) {
+  entries.forEach(function(entry) {
+    if (!entry.isIntersecting) {
+      return;
+    } 
+    else {
+      entry.target.classList.add("aboutAppear");
+      aboutAppearOnScroll.unobserve(entry.target);
+    }
+  });
+}, aboutAppearOptions);
+
+sliders.forEach(slider => {
+  appearOnScroll.observe(slider);
+});
+
+aboutSliders.forEach(aboutSlider => {
+  aboutAppearOnScroll.observe(aboutSlider);
+});
+// About page intersection observer scrolling end
+
+
+
 
 // Hmaburger menu JS toggle function begin
 
@@ -84,19 +136,4 @@ let messageArea = document.getElementById("contact-enter-text-message-area").val
     setTimeout(function() {formErrorOut.className = formErrorOut.className.replace("displayError", "");}, 2500); 
   }
   
-}
-
-// Handles about page animations when the user scrolls down the page
-window.onscroll = function() {aboutScrollFunction()};
-
-function aboutScrollFunction() {
-  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-    document.getElementById("second-about-p-2").style.animation = "second-about-page-content-first-instance-2 1s ease-in-out"
-    document.getElementById("second-about-p-2").style.opacity = "1"
-  }
-  if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
-    document.getElementById("second-about-p-3").style.animation = "second-about-page-content-first-instance-3 1s ease-in-out"
-    document.getElementById("second-about-p-3").style.opacity = "1"
-  }
-
 }
