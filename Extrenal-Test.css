@@ -460,7 +460,7 @@ hr {
 }
 
 .works-format-img-left, .works-format-img-right {
-    width: 700px;
+    width: 800px;
     height: 500px;
     opacity: 0;
     transition: opacity 1s ease-in, transform 1s cubic-bezier(0.15, 0.3, 0.16, 0.96) 0.1s;
@@ -520,8 +520,7 @@ hr {
         opacity: 1;
     }
 }
-.works-main {
-    background-image: url(Images/Adobe-Sparks-About-Me-Image-Personal.JPG);
+.works-main, .works-main-photoshop, .works-main-tourism, .works-main-chronoshift  {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -531,15 +530,20 @@ hr {
     width: 100%;
 }
 
+.works-main {
+    background-image: url(Images/Adobe-Sparks-About-Me-Image-Personal.JPG);
+}
+
 .works-main-photoshop {
     background-image: url(Images/Personal-website-my-name-photoshop.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-    width: 100%;
+}
+
+.works-main-tourism {
+    background-image: url(Images/Personal-portfolio-triasia-website.JPG);
+}
+
+.works-main-chronoshift {
+    background-image: url(Images/Personal-portfolio-chronoshift.JPG);
 }
 
 .works-main::before {
