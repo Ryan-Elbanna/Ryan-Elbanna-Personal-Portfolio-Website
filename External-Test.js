@@ -91,11 +91,11 @@ hamburgerIcon.addEventListener("click", function() {
 function validateForm() {
 
 let form = document.getElementById("contact-mig-form-main-items");
-let formErrorOut = document.getElementById("unique-form-error-display")
+let formErrorOut = document.getElementById("unique-form-error-display");
 let formData = form.elements;
 let formFirstName = formData["first-name"].value;
 let formLastName = formData["last-name"].value;
-let formEmail = formData["Email-add"].value
+let formEmail = formData["Email-add"].value;
 let regExp = /\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b/;
 let messageArea = document.getElementById("contact-enter-text-message-area").value;
 
