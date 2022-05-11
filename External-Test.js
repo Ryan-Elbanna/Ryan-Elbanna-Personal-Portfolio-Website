@@ -26,6 +26,12 @@ function topFunction() {
 
 var aboutSliders = document.querySelectorAll(".aboutslide-in");
 var sliders = document.querySelectorAll(".slide-in");
+var homeSlideUp = document.querySelectorAll(".home-slide-up");
+
+const homeAppearOptions = {
+  thresholds: 0,
+  rootMargin: "0px 0px -200px 0px"
+};
 
 const appearOptions = {
   thresholds: 0,
@@ -36,6 +42,20 @@ const aboutAppearOptions = {
   thresholds: 0,
   rootMargin: "0px 0px -300px 0px"
 };
+
+// Home Page intersection observere scrolling begin
+var homeAppearOnScroll = new IntersectionObserver(function(entries, homeAppearOnScroll) {
+  entries.forEach(function(entry) {
+    if (!entry.isIntersecting) {
+      return;
+    } 
+    else {
+      entry.target.classList.add("homeAppear");
+      homeAppearOnScroll.unobserve(entry.target);
+    }
+  });
+}, homeAppearOptions);
+// Home Page intersection observere scrolling end
 
 // Works page intersection observer scrolling begin
 var appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
@@ -51,7 +71,6 @@ var appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) 
 }, appearOptions);
 // Works page intersection observer scrolling end
 
-
 // About page intersection observer scrolling begin
 var aboutAppearOnScroll = new IntersectionObserver(function(entries, aboutAppearOnScroll) {
   entries.forEach(function(entry) {
@@ -65,6 +84,9 @@ var aboutAppearOnScroll = new IntersectionObserver(function(entries, aboutAppear
   });
 }, aboutAppearOptions);
 
+// About page intersection observer scrolling end
+
+// Get all elements and put them into the instance of intersection observer start
 sliders.forEach(slider => {
   appearOnScroll.observe(slider);
 });
@@ -72,7 +94,11 @@ sliders.forEach(slider => {
 aboutSliders.forEach(aboutSlider => {
   aboutAppearOnScroll.observe(aboutSlider);
 });
-// About page intersection observer scrolling end
+
+homeSlideUp.forEach(homeSlider => {
+  homeAppearOnScroll.observe(homeSlider);
+});
+// Get all elements and put them into the instance of intersection observer end
 
 
 
