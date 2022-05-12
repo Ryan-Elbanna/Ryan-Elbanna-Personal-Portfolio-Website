@@ -285,6 +285,7 @@ hr {
     margin-top: 200px;
 }
 
+
 .home-content-slide-up{
     max-width: 1000px;
     margin-left: auto;
@@ -555,7 +556,7 @@ hr {
     background-image: url(Images/Personal-portfolio-chronoshift.JPG);
 }
 
-.works-main::before {
+.works-main::before, .works-main-photoshop::before, .works-main-tourism::before, .works-main-chronoshift::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1034,6 +1035,56 @@ footer span {
     padding: 10px;
 }
 
+/* Ronaldo  Start*/
+
+.ronaldomain {
+    overflow: hidden;
+}
+
+.ronaldoimg {
+    width: 100vw;
+    height: 100vh;
+    animation: ronaldofade 3s ease-in;
+}
+
+.ronaldogif {
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    left: 0%;
+    bottom: 50%;
+    z-index: 4;
+}
+
+.ronaldogif2 {
+    width: 25%;
+    height: 25%;
+    position: absolute;
+    right: 0%;
+    bottom: 50%;
+    z-index: 4;
+}
+
+.SIU {
+    color: #FFFFFF;
+    font-size: 104px;
+    transform: translate(-50%, 50%);
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    z-index: 1;
+}
+
+@keyframes ronaldofade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+ }
+
+/* Ronaldo End */
 
 /* #hi:after {
   content: "";
